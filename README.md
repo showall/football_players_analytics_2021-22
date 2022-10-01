@@ -1,26 +1,27 @@
-# Starbucks Offer Recommendation System
+# Data Science NanoDegree Capstone 1
 
 ## Introduction
 
-This project is to mainly assess the effectiveness of a marketing 
-campaign deployed by Starbucks on certain demographic groups of customers.
+This data set contains the match logs of active football/soccer players in the top 5 European Soccer Leagues in 2021/22 season. The dataset contains the performance stats of individual players in matches played across the 2021/22 season. The data dictionary of the dataset is in the next section.
+
+The project aims to provide a sytematic answer to identify best peforming players across the five leagues. Given that all players perform different functions across the field, it is better to divide into segments according to the roles. 
+
+Not all roles priorities the same attributes or qualities, which the why the project will involve looking at each position and pick up some qualities that we think defines that position on the field. For example, a Centre-Forward should be rated based on their goal scoring records and how effective is their conversion rate i.e how many goals per attempt on goal. For the case of midfielders, it is very tricky to actually pick the "best" midfielders because each midfielder has different functional roles. In this project, we will demonstrate by focusing only on the attacking attributes of midfielders.
+
+The data set also consists of some null values which needs to be taken care of. Some additional features are added to create qualities that are found relevant and important (to a position)
 
 ## Directory
 
-Starbuck_Campaign
+DSND - Capstone 1
 |- README.md
-|- Starbucks_Capstone_notebook.ipynb
-|- data
-    | - portfolio.json
-    | - profile.json
-    | - transcript.json
-|- .ipynb_checkpoints
-|- Capstone_Project-Report.pdf
+|- Udacity -NDDS - Capstone1
+|- fbref_stats_2021_22_Five_European_Leagues.csv
+
 
 ## Tools and Softwares
 
 The project was implemented in Jupyter Notebooks using Python with libraries like 
-Pandas, Numpy and Sklearn.
+Pandas
 
 To access notebook using terminal :
 
@@ -31,47 +32,34 @@ jupyter notebook Starbucks_Capstone_notebook.ipynb
 
 ### Business Problem Statements
 
-The following questions were considered in analysis the business problem:
+Mainly, we want to answer from the dataset who are :- 
 
-- Which types of customers are more likely to respond to an offer ? 
-- Is there any incremental impact from the marketing campaign ?
+a) The Best Performing Best Goalkeepers across top 5 European Soccer Leagues in footballing 2021/22 season ?
+
+b) The Best Performing Best Centrebacks across top 5 European Soccer Leagues in footballing 2021/22 season ?
+
+c) The Best Performing Best Midfielders(attacking attributes) across top 5 European Soccer Leagues in footballing 2021/22 season ?
+
+d) The Best Performing Best Centre-Forward across top 5 European Soccer Leagues in footballing 2021/22 season ?
 
 ### Data
 
-The three input data files portfolio.json, profile.json, transcript.json are 
-stored in the data folders. 
+The main data file is  fbref_stats_2021_22_Five_European_Leagues.csv
 
 
-### Exploratory Analysis and Data Preprocessing
+### Data Cleaning and Data Engineering
 
-Column splitting, missing data operations and features engineering to provide better 
-clarity in business contexts. Further, each offer and transaction are merged with the
-demographic data of the customers. The final dataset shows the interactions between 
-the customers and the offers provided with the net spent and rewards claimed. 
-
-
-### Model Fitting
-
-Data are trained on four different models (Random Forest Classifier, Gradient Boosting, 
-Light Gradient Boosting, Extreme Gradient Boosting) and selected for the 
-best based on accuracy scores. The model is to be improved via Grid Search.
-
-
-### Correlation Analysis
-
-The data is also used to map the univariate correlation between key demographic features. 
-The fitted model can be used to predict the likely outcome of hit rate based on the 
-recommendation from the correlation to confirm the recommendation.
+Missing data operations and features engineering to augment the data set. 
+Data sets are divided into segments to answer the questions posed in the problem statements. 
+Further, a "scoring" column is added to be used for ranking for each segment. 
 
 
 ### Analysis and Justification
 
-To test the result of the hit rate, the t-test could be use to compare the difference 
-in sales performance for the target segment between transactions between non-offer 
-receiving  and offer receiving groups.  
+The results are shown as tabular and graphical form in the .ipynb file. 
 
 
 ### 5. Report and Github
 
-A full analysis report is included, Capstone_Project-Report.pdf.  
-The github repository has been stored in ( https://github.com/showall/starbucks_reward_program.git)
+A presentation report can also be found in  https://medium.com/@gerardsho/who-stood-out-in-the-2021-22-football-season-dd671eb293dc
+The github repository has been stored in https://github.com/showall/football_players_analytics_2021-22.git
