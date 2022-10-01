@@ -1,0 +1,4 @@
+boto3
+pandas
+s3fs==2022.8.2
+seaborn
